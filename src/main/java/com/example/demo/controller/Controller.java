@@ -52,7 +52,7 @@ public class Controller {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @DeleteMapping(value = "/delete/{Id}")
+    @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable Long id) {
         boolean deletionStatus = classService.deleteReminder(id);
         if (deletionStatus) {
